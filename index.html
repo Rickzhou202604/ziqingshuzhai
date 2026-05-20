@@ -1205,6 +1205,25 @@
 
         .footer-bottom a:hover { color: rgba(255,255,255,0.6); }
 
+        /* ========== FOOTER LINKS ========== */
+        .footer-links .footer-link-list {
+            column-count: 2;
+            column-gap: 20px;
+        }
+        .footer-links .footer-link-list li {
+            margin-bottom: 6px;
+            break-inside: avoid;
+        }
+        .footer-links .footer-link-list a:hover {
+            color: white;
+            padding-left: 4px;
+        }
+        @media (max-width: 768px) {
+            .footer-links .footer-link-list {
+                column-count: 1;
+            }
+        }
+
         /* ========== BACK TO TOP ========== */
         .back-to-top {
             position: fixed;
@@ -5982,7 +6001,25 @@
             <div class="section-divider"></div>
         </div>
         <div class="hot-rank-grid" id="hotRankGrid">
-            <!-- 动态渲染 -->
+            <!-- 本期热门 -->
+            <div class="hot-rank-card" onclick="App.openArticleDetail('a11')">
+                <span class="hot-rank-num">01</span>
+                <span class="hot-rank-badge gold">🔥 最热</span>
+                <h4 class="hot-rank-title">阳明心学：知行合一的现代启示</h4>
+                <p class="hot-rank-meta"><span class="hot-rank-views">345 阅读</span></p>
+            </div>
+            <div class="hot-rank-card" onclick="App.openArticleDetail('a1')">
+                <span class="hot-rank-num">02</span>
+                <span class="hot-rank-badge red">国学</span>
+                <h4 class="hot-rank-title">道德经中的治世智慧</h4>
+                <p class="hot-rank-meta"><span class="hot-rank-views">328 阅读</span></p>
+            </div>
+            <div class="hot-rank-card" onclick="App.openArticleDetail('a8')">
+                <span class="hot-rank-num">03</span>
+                <span class="hot-rank-badge green">历史</span>
+                <h4 class="hot-rank-title">万历十五年：一个看似平淡的年份</h4>
+                <p class="hot-rank-meta"><span class="hot-rank-views">312 阅读</span></p>
+            </div>
         </div>
     </div>
 
@@ -6018,7 +6055,12 @@
                     <span class="category-tag-v2">小学</span>
                 </div>
                 <div class="category-body-v2">
-                    <div class="category-articles-v2" id="catBody-ancient-经部"></div>
+                    <div class="category-articles-v2" id="catBody-ancient-经部">
+                        <div class="category-articles-title">精选典籍</div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a5')"><span class="cat-art-dot"></span><span class="cat-art-title">说文解字：汉字的前世今生</span><span class="cat-art-views">167 阅读</span></div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a1')"><span class="cat-art-dot"></span><span class="cat-art-title">论语：中国人的精神底色</span><span class="cat-art-views">328 阅读</span></div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a11')"><span class="cat-art-dot"></span><span class="cat-art-title">四书章句集注：朱子之学</span><span class="cat-art-views">245 阅读</span></div>
+                    </div>
                 </div>
             </div>
             <div class="category-item-v2 fade-in" onclick="App.toggleCategory(this,'ancient','史部')">
@@ -6037,7 +6079,12 @@
                     <span class="category-tag-v2">地方志</span>
                 </div>
                 <div class="category-body-v2">
-                    <div class="category-articles-v2" id="catBody-ancient-史部"></div>
+                    <div class="category-articles-v2" id="catBody-ancient-史部">
+                        <div class="category-articles-title">精选典籍</div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a6')"><span class="cat-art-dot"></span><span class="cat-art-title">史记·刺客列传：士为知己者死</span><span class="cat-art-views">294 阅读</span></div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a2')"><span class="cat-art-dot"></span><span class="cat-art-title">资治通鉴：何以传世千年</span><span class="cat-art-views">256 阅读</span></div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a8')"><span class="cat-art-dot"></span><span class="cat-art-title">汉书：断代史之祖</span><span class="cat-art-views">198 阅读</span></div>
+                    </div>
                 </div>
             </div>
             <div class="category-item-v2 fade-in" onclick="App.toggleCategory(this,'ancient','子部')">
@@ -6056,7 +6103,12 @@
                     <span class="category-tag-v2">艺术谱录</span>
                 </div>
                 <div class="category-body-v2">
-                    <div class="category-articles-v2" id="catBody-ancient-子部"></div>
+                    <div class="category-articles-v2" id="catBody-ancient-子部">
+                        <div class="category-articles-title">精选典籍</div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a1')"><span class="cat-art-dot"></span><span class="cat-art-title">道德经中的治世智慧</span><span class="cat-art-views">328 阅读</span></div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a11')"><span class="cat-art-dot"></span><span class="cat-art-title">传习录：阳明心学精义</span><span class="cat-art-views">345 阅读</span></div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a7')"><span class="cat-art-dot"></span><span class="cat-art-title">庄子：逍遥游的哲学</span><span class="cat-art-views">212 阅读</span></div>
+                    </div>
                 </div>
             </div>
             <div class="category-item-v2 fade-in" onclick="App.toggleCategory(this,'ancient','集部')">
@@ -6075,7 +6127,12 @@
                     <span class="category-tag-v2">戏曲·小说</span>
                 </div>
                 <div class="category-body-v2">
-                    <div class="category-articles-v2" id="catBody-ancient-集部"></div>
+                    <div class="category-articles-v2" id="catBody-ancient-集部">
+                        <div class="category-articles-title">精选典籍</div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a4')"><span class="cat-art-dot"></span><span class="cat-art-title">从《东京梦华录》看宋人生活</span><span class="cat-art-views">213 阅读</span></div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a7')"><span class="cat-art-dot"></span><span class="cat-art-title">人间词话：境界说与词之美学</span><span class="cat-art-views">178 阅读</span></div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a10')"><span class="cat-art-dot"></span><span class="cat-art-title">红楼梦脂砚斋重评</span><span class="cat-art-views">267 阅读</span></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -6145,7 +6202,37 @@
                 </div>
             </div>
             <div class="article-list fade-in-right" id="wechatArticleList">
-                <!-- 动态渲染 -->
+                <!-- 清斋公号精选推文 -->
+                <div class="article-item" onclick="App.openArticleDetail('a11')">
+                    <span class="article-tag">国学随笔</span>
+                    <h4 class="article-title">阳明心学：知行合一的现代启示</h4>
+                    <p class="article-meta">2026-05-03 · 345 阅读</p>
+                </div>
+                <div class="article-item" onclick="App.openArticleDetail('a1')">
+                    <span class="article-tag">国学随笔</span>
+                    <h4 class="article-title">道德经中的治世智慧</h4>
+                    <p class="article-meta">2026-05-01 · 328 阅读</p>
+                </div>
+                <div class="article-item" onclick="App.openArticleDetail('a8')">
+                    <span class="article-tag">历史通识</span>
+                    <h4 class="article-title">万历十五年：一个看似平淡的年份</h4>
+                    <p class="article-meta">2026-04-12 · 312 阅读</p>
+                </div>
+                <div class="article-item" onclick="App.openArticleDetail('a2')">
+                    <span class="article-tag">好书推荐</span>
+                    <h4 class="article-title">《资治通鉴》何以传世千年</h4>
+                    <p class="article-meta">2026-04-28 · 256 阅读</p>
+                </div>
+                <div class="article-item" onclick="App.openArticleDetail('a6')">
+                    <span class="article-tag">史部</span>
+                    <h4 class="article-title">史记·刺客列传：士为知己者死</h4>
+                    <p class="article-meta">2026-04-18 · 294 阅读</p>
+                </div>
+                <div class="article-item" onclick="App.openArticleDetail('a10')">
+                    <span class="article-tag">世界文学</span>
+                    <h4 class="article-title">百年孤独：魔幻现实主义的巅峰</h4>
+                    <p class="article-meta">2026-04-08 · 267 阅读</p>
+                </div>
             </div>
         </div>
     </section>
@@ -6188,7 +6275,12 @@
                     <span class="category-tag-v2">人类学·民俗学</span>
                 </div>
                 <div class="category-body-v2">
-                    <div class="category-articles-v2" id="catBody-modern-人文社科"></div>
+                    <div class="category-articles-v2" id="catBody-modern-人文社科">
+                        <div class="category-articles-title">精选文章</div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a7')"><span class="cat-art-dot"></span><span class="cat-art-title">人间词话：境界说与词之美学</span><span class="cat-art-views">178 阅读</span></div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a11')"><span class="cat-art-dot"></span><span class="cat-art-title">阳明心学：知行合一的现代启示</span><span class="cat-art-views">345 阅读</span></div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a8')"><span class="cat-art-dot"></span><span class="cat-art-title">中国哲学简史：冯友兰的智慧</span><span class="cat-art-views">234 阅读</span></div>
+                    </div>
                 </div>
             </div>
             <div class="category-item-v2 fade-in" onclick="App.toggleCategory(this,'modern','文学新作')">
@@ -6206,7 +6298,12 @@
                     <span class="category-tag-v2">散文随笔</span>
                 </div>
                 <div class="category-body-v2">
-                    <div class="category-articles-v2" id="catBody-modern-文学新作"></div>
+                    <div class="category-articles-v2" id="catBody-modern-文学新作">
+                        <div class="category-articles-title">精选文章</div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a4')"><span class="cat-art-dot"></span><span class="cat-art-title">从《东京梦华录》看宋人生活</span><span class="cat-art-views">213 阅读</span></div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a3')"><span class="cat-art-dot"></span><span class="cat-art-title">春日读书会小记</span><span class="cat-art-views">189 阅读</span></div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a10')"><span class="cat-art-dot"></span><span class="cat-art-title">当代散文选读</span><span class="cat-art-views">156 阅读</span></div>
+                    </div>
                 </div>
             </div>
             <div class="category-item-v2 fade-in" onclick="App.toggleCategory(this,'modern','历史通识')">
@@ -6224,7 +6321,12 @@
                     <span class="category-tag-v2">专门史·断代史</span>
                 </div>
                 <div class="category-body-v2">
-                    <div class="category-articles-v2" id="catBody-modern-历史通识"></div>
+                    <div class="category-articles-v2" id="catBody-modern-历史通识">
+                        <div class="category-articles-title">精选文章</div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a8')"><span class="cat-art-dot"></span><span class="cat-art-title">万历十五年：一个看似平淡的年份</span><span class="cat-art-views">312 阅读</span></div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a2')"><span class="cat-art-dot"></span><span class="cat-art-title">《资治通鉴》何以传世千年</span><span class="cat-art-views">256 阅读</span></div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a6')"><span class="cat-art-dot"></span><span class="cat-art-title">史记·刺客列传：士为知己者死</span><span class="cat-art-views">294 阅读</span></div>
+                    </div>
                 </div>
             </div>
             <div class="category-item-v2 fade-in" onclick="App.toggleCategory(this,'modern','学术科普')">
@@ -6242,7 +6344,12 @@
                     <span class="category-tag-v2">学术随笔</span>
                 </div>
                 <div class="category-body-v2">
-                    <div class="category-articles-v2" id="catBody-modern-学术科普"></div>
+                    <div class="category-articles-v2" id="catBody-modern-学术科普">
+                        <div class="category-articles-title">精选文章</div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a7')"><span class="cat-art-dot"></span><span class="cat-art-title">人间词话：境界说与词之美学</span><span class="cat-art-views">178 阅读</span></div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a5')"><span class="cat-art-dot"></span><span class="cat-art-title">说文解字：汉字的前世今生</span><span class="cat-art-views">167 阅读</span></div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a1')"><span class="cat-art-dot"></span><span class="cat-art-title">道德经中的治世智慧</span><span class="cat-art-views">328 阅读</span></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -6286,7 +6393,12 @@
                     <span class="category-tag-v2">汉学书评</span>
                 </div>
                 <div class="category-body-v2">
-                    <div class="category-articles-v2" id="catBody-overseas-海外汉学"></div>
+                    <div class="category-articles-v2" id="catBody-overseas-海外汉学">
+                        <div class="category-articles-title">精选文章</div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a9')"><span class="cat-art-dot"></span><span class="cat-art-title">菊与刀：理解日本文化的钥匙</span><span class="cat-art-views">198 阅读</span></div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a12')"><span class="cat-art-dot"></span><span class="cat-art-title">丝绸之路：东西方文明的桥梁</span><span class="cat-art-views">221 阅读</span></div>
+                        <div class="category-article-row" onclick="App.openArticleDetail('a8')"><span class="cat-art-dot"></span><span class="cat-art-title">海外学者眼中的中国哲学</span><span class="cat-art-views">176 阅读</span></div>
+                    </div>
                 </div>
             </div>
             <div class="category-item-v2 fade-in" onclick="App.toggleCategory(this,'overseas','世界文学')">
@@ -6383,7 +6495,89 @@
                 <button class="lib-filter-btn" data-cat="overseas" onclick="App.filterLibraryBooks('overseas',this)">域外译著</button>
                 <button class="lib-filter-btn" data-cat="other" onclick="App.filterLibraryBooks('other',this)">综合其他</button>
             </div>
-            <div class="book-grid" id="bookGrid"></div>
+            <div class="book-grid" id="bookGrid">
+                <!-- 藏书阁精选 -->
+                <div class="book-card" onclick="App.openBookDetail('b1')">
+                    <div class="book-card-cover" style="background:linear-gradient(135deg,#8b2500,#c6532c);"><span class="book-card-cover-placeholder">论语</span></div>
+                    <span class="book-card-category cat-ancient">古籍经典</span>
+                    <div class="book-card-body">
+                        <h4 class="book-card-title">论语</h4>
+                        <p class="book-card-author">孔子及其弟子</p>
+                        <div class="book-card-rating"><span class="book-stars"><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span></span><span class="book-rating-num">4.8</span></div>
+                        <span class="book-card-tag">儒家经典</span>
+                    </div>
+                </div>
+                <div class="book-card" onclick="App.openBookDetail('b2')">
+                    <div class="book-card-cover" style="background:linear-gradient(135deg,#2c2c2c,#555);"><span class="book-card-cover-placeholder">红楼梦</span></div>
+                    <span class="book-card-category cat-ancient">古籍经典</span>
+                    <div class="book-card-body">
+                        <h4 class="book-card-title">红楼梦</h4>
+                        <p class="book-card-author">曹雪芹</p>
+                        <div class="book-card-rating"><span class="book-stars"><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span></span><span class="book-rating-num">4.9</span></div>
+                        <span class="book-card-tag">古典小说</span>
+                    </div>
+                </div>
+                <div class="book-card" onclick="App.openBookDetail('b5')">
+                    <div class="book-card-cover" style="background:linear-gradient(135deg,#1a3a1a,#3d5a3d);"><span class="book-card-cover-placeholder">道德经</span></div>
+                    <span class="book-card-category cat-ancient">古籍经典</span>
+                    <div class="book-card-body">
+                        <h4 class="book-card-title">道德经</h4>
+                        <p class="book-card-author">老子</p>
+                        <div class="book-card-rating"><span class="book-stars"><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span></span><span class="book-rating-num">4.7</span></div>
+                        <span class="book-card-tag">道家经典</span>
+                    </div>
+                </div>
+                <div class="book-card" onclick="App.openBookDetail('b3')">
+                    <div class="book-card-cover" style="background:linear-gradient(135deg,#3d2b1f,#7a5030);"><span class="book-card-cover-placeholder">万历</span></div>
+                    <span class="book-card-category cat-modern">现代文学</span>
+                    <div class="book-card-body">
+                        <h4 class="book-card-title">万历十五年</h4>
+                        <p class="book-card-author">黄仁宇</p>
+                        <div class="book-card-rating"><span class="book-stars"><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star">★</span></span><span class="book-rating-num">4.6</span></div>
+                        <span class="book-card-tag">历史</span>
+                    </div>
+                </div>
+                <div class="book-card" onclick="App.openBookDetail('b4')">
+                    <div class="book-card-cover" style="background:linear-gradient(135deg,#4a8fb5,#3a7fa0);"><span class="book-card-cover-placeholder">百年</span></div>
+                    <span class="book-card-category cat-overseas">域外译著</span>
+                    <div class="book-card-body">
+                        <h4 class="book-card-title">百年孤独</h4>
+                        <p class="book-card-author">加西亚·马尔克斯</p>
+                        <div class="book-card-rating"><span class="book-stars"><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span></span><span class="book-rating-num">4.7</span></div>
+                        <span class="book-card-tag">魔幻现实主义</span>
+                    </div>
+                </div>
+                <div class="book-card" onclick="App.openBookDetail('b6')">
+                    <div class="book-card-cover" style="background:linear-gradient(135deg,#5a8a6a,#4a7a6a);"><span class="book-card-cover-placeholder">词话</span></div>
+                    <span class="book-card-category cat-modern">现代文学</span>
+                    <div class="book-card-body">
+                        <h4 class="book-card-title">人间词话</h4>
+                        <p class="book-card-author">王国维</p>
+                        <div class="book-card-rating"><span class="book-stars"><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star">★</span></span><span class="book-rating-num">4.5</span></div>
+                        <span class="book-card-tag">文学批评</span>
+                    </div>
+                </div>
+                <div class="book-card" onclick="App.openBookDetail('b8')">
+                    <div class="book-card-cover" style="background:linear-gradient(135deg,#1a2040,#3d5080);"><span class="book-card-cover-placeholder">哲学</span></div>
+                    <span class="book-card-category cat-modern">现代文学</span>
+                    <div class="book-card-body">
+                        <h4 class="book-card-title">中国哲学简史</h4>
+                        <p class="book-card-author">冯友兰</p>
+                        <div class="book-card-rating"><span class="book-stars"><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star">★</span></span><span class="book-rating-num">4.6</span></div>
+                        <span class="book-card-tag">哲学</span>
+                    </div>
+                </div>
+                <div class="book-card" onclick="App.openBookDetail('b7')">
+                    <div class="book-card-cover" style="background:linear-gradient(135deg,#c8a84a,#a88830);"><span class="book-card-cover-placeholder">浮世</span></div>
+                    <span class="book-card-category cat-overseas">域外译著</span>
+                    <div class="book-card-body">
+                        <h4 class="book-card-title">浮世绘三杰</h4>
+                        <p class="book-card-author">安藤广重等</p>
+                        <div class="book-card-rating"><span class="book-stars"><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star filled">★</span><span class="book-star">★</span></span><span class="book-rating-num">4.4</span></div>
+                        <span class="book-card-tag">艺术</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div></section>
 
@@ -6943,13 +7137,19 @@
                     <li><a href="#">广东 · 广州</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <div class="footer-section footer-links">
                 <h4 data-i18n="footer.links">友情链接</h4>
-                <ul>
-                    <li><a href="#" target="_blank" rel="noopener">国家图书馆</a></li>
-                    <li><a href="#" target="_blank" rel="noopener">中国哲学书电子化计划</a></li>
-                    <li><a href="#" target="_blank" rel="noopener">汉典</a></li>
-                    <li><a href="#" target="_blank" rel="noopener">殆知阁古籍</a></li>
+                <ul class="footer-link-list">
+                    <li><a href="https://www.nlc.cn/" target="_blank" rel="noopener">中国国家图书馆</a></li>
+                    <li><a href="https://www.dpm.org.cn/" target="_blank" rel="noopener">故宫博物院</a></li>
+                    <li><a href="https://www.chnmuseum.cn/" target="_blank" rel="noopener">中国国家博物馆</a></li>
+                    <li><a href="http://www.gujicn.com/" target="_blank" rel="noopener">中国古籍保护中心</a></li>
+                    <li><a href="https://www.nlc.cn/nlcm/" target="_blank" rel="noopener">国家典籍博物馆</a></li>
+                    <li><a href="https://www.lib.pku.edu.cn/" target="_blank" rel="noopener">北京大学图书馆</a></li>
+                    <li><a href="https://lib.tsinghua.edu.cn/" target="_blank" rel="noopener">清华大学图书馆</a></li>
+                    <li><a href="https://www.library.sh.cn/" target="_blank" rel="noopener">上海图书馆</a></li>
+                    <li><a href="https://www.zjlib.cn/" target="_blank" rel="noopener">浙江图书馆</a></li>
+                    <li><a href="http://www.zgsfw.com/" target="_blank" rel="noopener">中国书法网</a></li>
                 </ul>
             </div>
         </div>
