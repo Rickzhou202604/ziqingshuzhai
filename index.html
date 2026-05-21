@@ -5482,6 +5482,289 @@
             .decor-plum, .decor-orchid, .decor-bamboo, .decor-chrysanthemum { display: none; }
         }
         </style>
+
+        /* ========== 板块独立Hero区 ========== */
+        .section-hero {
+            padding: 100px 5% 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .section-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.04;
+            pointer-events: none;
+        }
+        .section-hero-title {
+            font-family: 'Noto Serif SC', 'STKaiti', 'KaiTi', serif;
+            font-size: clamp(28px, 5vw, 48px);
+            letter-spacing: 6px;
+            margin-bottom: 12px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-hero-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            border-radius: 2px;
+        }
+        .section-hero-sub {
+            font-size: 14px;
+            letter-spacing: 2px;
+            opacity: 0.6;
+            max-width: 600px;
+            margin: 16px auto 0;
+            line-height: 1.8;
+        }
+        .section-hero-deco {
+            font-size: 13px;
+            opacity: 0.35;
+            letter-spacing: 4px;
+            margin-top: 20px;
+            font-family: 'Noto Serif SC', serif;
+        }
+
+        /* 古籍典藏 - 竹青绿 + 梅红点缀 */
+        #ancient .section-hero { background: linear-gradient(160deg, #f0f4ef 0%, #e8f0e8 50%, #f5f2eb 100%); }
+        #ancient .section-hero::before {
+            background-image:
+                radial-gradient(circle at 20% 30%, var(--bamboo-green) 0.5px, transparent 0.5px),
+                radial-gradient(circle at 80% 70%, var(--plum-red) 0.5px, transparent 0.5px);
+            background-size: 40px 40px, 60px 60px;
+        }
+        #ancient .section-hero-title { color: var(--bamboo-green); }
+        #ancient .section-hero-title::after { background: linear-gradient(90deg, var(--bamboo-green), var(--plum-red)); }
+        #ancient .section-hero-sub { color: var(--text-mid); }
+        #ancient .section-hero-deco { color: var(--bamboo-green); }
+
+        /* 清斋公号 - 朱砂红 + 金色点缀 */
+        #wechat .section-hero { background: linear-gradient(160deg, #faf5f5 0%, #f7f0ed 50%, #f5f2eb 100%); }
+        #wechat .section-hero::before {
+            background-image:
+                radial-gradient(circle at 30% 40%, var(--stone-red) 0.5px, transparent 0.5px),
+                radial-gradient(circle at 70% 60%, var(--gold-accent) 0.5px, transparent 0.5px);
+            background-size: 50px 50px, 70px 70px;
+        }
+        #wechat .section-hero-title { color: var(--stone-red); }
+        #wechat .section-hero-title::after { background: linear-gradient(90deg, var(--stone-red), var(--gold-accent)); }
+        #wechat .section-hero-sub { color: var(--text-mid); }
+        #wechat .section-hero-deco { color: var(--stone-red); }
+
+        /* 今识文渊 - 天青蓝 + 菊黄点缀 */
+        #modern .section-hero { background: linear-gradient(160deg, #eef4f7 0%, #e8f0f5 50%, #f0ede6 100%); }
+        #modern .section-hero::before {
+            background-image:
+                radial-gradient(circle at 25% 35%, var(--sky-blue) 0.5px, transparent 0.5px),
+                radial-gradient(circle at 75% 65%, var(--chrysanthemum-gold) 0.5px, transparent 0.5px);
+            background-size: 45px 45px, 65px 65px;
+        }
+        #modern .section-hero-title { color: var(--sky-blue); }
+        #modern .section-hero-title::after { background: linear-gradient(90deg, var(--sky-blue), var(--chrysanthemum-gold)); }
+        #modern .section-hero-sub { color: var(--text-mid); }
+        #modern .section-hero-deco { color: var(--sky-blue); }
+
+        /* 海外藏书 - 深海蓝 + 苔绿点缀 */
+        #overseas .section-hero { background: linear-gradient(160deg, #eef2f7 0%, #e8eef5 50%, #f0ede6 100%); }
+        #overseas .section-hero::before {
+            background-image:
+                radial-gradient(circle at 15% 25%, var(--ocean-blue) 0.5px, transparent 0.5px),
+                radial-gradient(circle at 85% 75%, var(--moss-green) 0.5px, transparent 0.5px);
+            background-size: 55px 55px, 75px 75px;
+        }
+        #overseas .section-hero-title { color: var(--ocean-blue); }
+        #overseas .section-hero-title::after { background: linear-gradient(90deg, var(--ocean-blue), var(--moss-green)); }
+        #overseas .section-hero-sub { color: var(--text-mid); }
+        #overseas .section-hero-deco { color: var(--ocean-blue); }
+
+        /* 书斋服务 - 竹青绿 + 菊黄点缀 */
+        #service .section-hero { background: linear-gradient(160deg, #f0f4ef 0%, #eaf0ea 50%, #f5f2eb 100%); }
+        #service .section-hero::before {
+            background-image:
+                radial-gradient(circle at 20% 50%, var(--spring-green) 0.5px, transparent 0.5px),
+                radial-gradient(circle at 80% 50%, var(--chrysanthemum-gold) 0.5px, transparent 0.5px);
+            background-size: 50px 50px;
+        }
+        #service .section-hero-title { color: var(--spring-green); }
+        #service .section-hero-title::after { background: linear-gradient(90deg, var(--spring-green), var(--chrysanthemum-gold)); }
+        #service .section-hero-sub { color: var(--text-mid); }
+        #service .section-hero-deco { color: var(--spring-green); }
+
+        /* ========== 四君子装饰条 ========== */
+        .four-gentlemen-ribbon {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            height: 4px;
+            margin: 0 auto;
+            max-width: 200px;
+            border-radius: 2px;
+            overflow: hidden;
+            opacity: 0.7;
+        }
+        .four-gentlemen-ribbon span {
+            flex: 1;
+            height: 100%;
+        }
+        .ribbon-mei { background: var(--plum-red); }
+        .ribbon-lan { background: var(--orchid-purple); }
+        .ribbon-zhu { background: var(--bamboo-green); }
+        .ribbon-ju { background: var(--chrysanthemum-gold); }
+
+        /* ========== 板块特色内容卡片 ========== */
+        .featured-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.4s var(--ease-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+        .featured-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+        .featured-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+        }
+        .featured-card.ancient::before { background: linear-gradient(90deg, var(--bamboo-green), var(--plum-red)); }
+        .featured-card.wechat::before { background: linear-gradient(90deg, var(--stone-red), var(--gold-accent)); }
+        .featured-card.modern::before { background: linear-gradient(90deg, var(--sky-blue), var(--chrysanthemum-gold)); }
+        .featured-card.overseas::before { background: linear-gradient(90deg, var(--ocean-blue), var(--moss-green)); }
+        .featured-card.service::before { background: linear-gradient(90deg, var(--spring-green), var(--chrysanthemum-gold)); }
+
+        .featured-card-icon {
+            width: 48px; height: 48px;
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+        .featured-card.ancient .featured-card-icon { background: rgba(90,138,106,0.10); }
+        .featured-card.wechat .featured-card-icon { background: rgba(160,72,72,0.10); }
+        .featured-card.modern .featured-card-icon { background: rgba(90,138,170,0.10); }
+        .featured-card.overseas .featured-card-icon { background: rgba(74,127,144,0.10); }
+        .featured-card.service .featured-card-icon { background: rgba(90,138,122,0.10); }
+
+        .featured-card h3 {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 18px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        .featured-card p {
+            font-size: 13px;
+            color: var(--text-mid);
+            line-height: 1.8;
+        }
+
+        /* ========== 精选书单展示 ========== */
+        .book-list-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+        .book-item {
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-xs);
+            transition: all 0.4s var(--ease-smooth);
+            cursor: pointer;
+        }
+        .book-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+        .book-item-cover {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: linear-gradient(135deg, var(--light-gray), var(--ivory-white));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+        .book-item-cover .book-spine {
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 12px;
+            opacity: 0.3;
+        }
+        .book-item.ancient .book-item-cover .book-spine { background: var(--bamboo-green); }
+        .book-item.wechat .book-item-cover .book-spine { background: var(--stone-red); }
+        .book-item.modern .book-item-cover .book-spine { background: var(--sky-blue); }
+        .book-item.overseas .book-item-cover .book-spine { background: var(--ocean-blue); }
+        .book-item.service .book-item-cover .book-spine { background: var(--spring-green); }
+
+        .book-item-info {
+            padding: 14px;
+        }
+        .book-item-title {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .book-item-author {
+            font-size: 11px;
+            color: var(--text-light);
+        }
+
+        /* ========== 板块统计展示 ========== */
+        .section-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        .section-stat-item {
+            text-align: center;
+        }
+        .section-stat-num {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .section-stat-label {
+            font-size: 12px;
+            color: var(--text-light);
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+        #ancient .section-stat-num { color: var(--bamboo-green); }
+        #wechat .section-stat-num { color: var(--stone-red); }
+        #modern .section-stat-num { color: var(--sky-blue); }
+        #overseas .section-stat-num { color: var(--ocean-blue); }
+        #service .section-stat-num { color: var(--spring-green); }
+
+        /* ========== 响应式 ========== */
+        @media (max-width: 768px) {
+            .section-hero { padding: 80px 5% 40px; }
+            .section-hero-title { letter-spacing: 3px; }
+            .book-list-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .section-stats { gap: 24px; }
+            .section-stat-num { font-size: 24px; }
+        }
+
+
 </head>
 <body>
     <!-- 页面加载动画 -->
@@ -11794,6 +12077,171 @@
             setLang
         };
     })();
+    </script>
+
+    <script>
+
+/* ========== 动态插入各板块Hero区 ========== */
+(function() {
+    // Hero区HTML模板
+    const HERO_HTML = {
+        ancient: `
+            <div class="section-hero" id="ancient-hero">
+                <div class="section-hero-title">古籍典藏</div>
+                <div class="four-gentlemen-ribbon">
+                    <span class="ribbon-mei"></span>
+                    <span class="ribbon-lan"></span>
+                    <span class="ribbon-zhu"></span>
+                    <span class="ribbon-ju"></span>
+                </div>
+                <div class="section-hero-sub">经史子集，四部齐备；汲古润今，守先待后</div>
+                <div class="section-hero-deco">—— 四库全书 · 典籍府 ——</div>
+                <div class="section-stats">
+                    <div class="section-stat-item">
+                        <div class="section-stat-num">409</div>
+                        <div class="section-stat-label">典藏总数</div>
+                    </div>
+                    <div class="section-stat-item">
+                        <div class="section-stat-num">12</div>
+                        <div class="section-stat-label">已上线文章</div>
+                    </div>
+                    <div class="section-stat-item">
+                        <div class="section-stat-num">24</div>
+                        <div class="section-stat-label">分类专题</div>
+                    </div>
+                </div>
+            </div>`,
+        wechat: `
+            <div class="section-hero" id="wechat-hero">
+                <div class="section-hero-title">清斋公号</div>
+                <div class="four-gentlemen-ribbon">
+                    <span class="ribbon-mei"></span>
+                    <span class="ribbon-lan"></span>
+                    <span class="ribbon-zhu"></span>
+                    <span class="ribbon-ju"></span>
+                </div>
+                <div class="section-hero-sub">自清书斋公众号，每周推送深度好文，守清静心，读圣贤书</div>
+                <div class="section-hero-deco">—— 清斋公号 · 每周更新 ——</div>
+                <div class="section-stats">
+                    <div class="section-stat-item">
+                        <div class="section-stat-num">6</div>
+                        <div class="section-stat-label">已上线文章</div>
+                    </div>
+                    <div class="section-stat-item">
+                        <div class="section-stat-num">1200</div>
+                        <div class="section-stat-label">单篇最高阅读</div>
+                    </div>
+                    <div class="section-stat-item">
+                        <div class="section-stat-num">52</div>
+                        <div class="section-stat-label">年度计划篇数</div>
+                    </div>
+                </div>
+            </div>`,
+        modern: `
+            <div class="section-hero" id="modern-hero">
+                <div class="section-hero-title">今识文渊</div>
+                <div class="four-gentlemen-ribbon">
+                    <span class="ribbon-mei"></span>
+                    <span class="ribbon-lan"></span>
+                    <span class="ribbon-zhu"></span>
+                    <span class="ribbon-ju"></span>
+                </div>
+                <div class="section-hero-sub">古今对话，中西互鉴；人文渊薮，智慧如海</div>
+                <div class="section-hero-deco">—— 今识文渊 · 知行合一 ——</div>
+                <div class="section-stats">
+                    <div class="section-stat-item">
+                        <div class="section-stat-num">12</div>
+                        <div class="section-stat-label">已上线文章</div>
+                    </div>
+                    <div class="section-stat-item">
+                        <div class="section-stat-num">8</div>
+                        <div class="section-stat-label">分类专题</div>
+                    </div>
+                    <div class="section-stat-item">
+                        <div class="section-stat-num">36</div>
+                        <div class="section-stat-label">计划文章数</div>
+                    </div>
+                </div>
+            </div>`,
+        overseas: `
+            <div class="section-hero" id="overseas-hero">
+                <div class="section-hero-title">海外藏书</div>
+                <div class="four-gentlemen-ribbon">
+                    <span class="ribbon-mei"></span>
+                    <span class="ribbon-lan"></span>
+                    <span class="ribbon-zhu"></span>
+                    <span class="ribbon-ju"></span>
+                </div>
+                <div class="section-hero-sub">汉籍流布四海，文脉贯通五洲；海外珍藏，共赏共研</div>
+                <div class="section-hero-deco">—— 海外藏书 · 汉籍流芳 ——</div>
+                <div class="section-stats">
+                    <div class="section-stat-item">
+                        <div class="section-stat-num">12</div>
+                        <div class="section-stat-label">已上线文章</div>
+                    </div>
+                    <div class="section-stat-item">
+                        <div class="section-stat-num">9</div>
+                        <div class="section-stat-label">收藏机构</div>
+                    </div>
+                    <div class="section-stat-item">
+                        <div class="section-stat-num">28000</div>
+                        <div class="section-stat-label">海外善本（件）</div>
+                    </div>
+                </div>
+            </div>`,
+        service: `
+            <div class="section-hero" id="service-hero">
+                <div class="section-hero-title">书斋服务</div>
+                <div class="four-gentlemen-ribbon">
+                    <span class="ribbon-mei"></span>
+                    <span class="ribbon-lan"></span>
+                    <span class="ribbon-zhu"></span>
+                    <span class="ribbon-ju"></span>
+                </div>
+                <div class="section-hero-sub">古籍数字化、文化空间租赁、定制文化礼品、文化沙龙策划</div>
+                <div class="section-hero-deco">—— 书斋服务 · 以文会友 ——</div>
+                <div class="section-stats">
+                    <div class="section-stat-item">
+                        <div class="section-stat-num">4</div>
+                        <div class="section-stat-label">已上线服务</div>
+                    </div>
+                    <div class="section-stat-item">
+                        <div class="section-stat-num">5</div>
+                        <div class="section-stat-label">服务类型</div>
+                    </div>
+                    <div class="section-stat-item">
+                        <div class="section-stat-num">98</div>
+                        <div class="section-stat-label">客户满意度</div>
+                    </div>
+                </div>
+            </div>`
+    };
+
+    function insertHeros() {
+        ['ancient','wechat','modern','overseas','service'].forEach(id => {
+            // 找板块容器
+            const section = document.getElementById(id);
+            if (!section) return;
+            // 避免重复插入
+            if (document.getElementById(id + '-hero')) return;
+            // 插入Hero区到板块顶部
+            section.insertAdjacentHTML('afterbegin', HERO_HTML[id]);
+        });
+    }
+
+    // 多时机尝试插入（应对动态渲染）
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', insertHeros);
+    } else {
+        insertHeros();
+    }
+    // 等待渲染完成后再次检查
+    setTimeout(insertHeros, 800);
+    setTimeout(insertHeros, 2000);
+    // 监听URL变化（SPA场景）
+    window.addEventListener('hashchange', insertHeros);
+    window.addEventListener('popstate', insertHeros);
+})();
     </script>
 </body>
 </html>
