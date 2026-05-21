@@ -5655,6 +5655,38 @@
     margin-top: 8px;
     min-height: 20px;
 }
+
+/* ===== 板块快速导航 ===== */
+.section-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto 36px;
+    padding: 0 20px;
+}
+.section-nav .nav-link {
+    padding: 8px 20px;
+    border-radius: 24px;
+    font-size: 14px;
+    color: #5a8a7a;
+    background: rgba(90,138,122,0.08);
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.25s ease;
+    border: 1px solid transparent;
+}
+.section-nav .nav-link:hover {
+    background: #5a8a7a;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(90,138,122,0.25);
+    transform: translateY(-2px);
+}
+.section-nav .nav-link.active {
+    background: #5a8a7a;
+    color: #fff;
+}
 </style>
 
         /* ========== 板块独立Hero区 ========== */
@@ -12566,6 +12598,35 @@
     }
     
     console.log('[自清书斋] 搜索功能已加载');
+})();
+    </script>
+
+    <script>
+
+/* 板块导航高亮 */
+(function() {
+    var navLinks = document.querySelectorAll('.section-nav .nav-link');
+    if (!navLinks.length) return;
+    
+    function updateActiveNav() {
+        var scrollPos = window.scrollY + 200;
+        var sections = ['ancient', 'wechat', 'modern', 'overseas', 'service'];
+        
+        for (var i = sections.length - 1; i >= 0; i--) {
+            var sec = document.getElementById(sections[i]);
+            if (sec && sec.offsetTop <= scrollPos) {
+                navLinks.forEach(function(l) { l.classList.remove('active'); });
+                navLinks[i].classList.add('active');
+                break;
+            }
+        }
+    }
+    
+    window.addEventListener('scroll', updateActiveNav);
+    window.addEventListener('load', updateActiveNav);
+    setTimeout(updateActiveNav, 500);
+    
+    console.log('[自清书斋] 板块快速导航已加载');
 })();
     </script>
 </body>
