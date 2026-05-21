@@ -1,0 +1,8 @@
+# robots.txt for 自清书斋
+# https://ziqingshuzhai.com
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://ziqingshuzhai.com/sitemap.xml
