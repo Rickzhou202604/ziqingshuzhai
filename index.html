@@ -5621,6 +5621,40 @@
     opacity: 1;
     visibility: visible;
 }
+
+/* ===== 搜索框 ===== */
+.search-container {
+    max-width: 600px;
+    margin: 0 auto 32px;
+    position: relative;
+}
+.search-input {
+    width: 100%;
+    padding: 14px 24px 14px 48px;
+    border: 2px solid #d4c9b5;
+    border-radius: 32px;
+    font-size: 16px;
+    font-family: 'Noto Serif SC', 'STKaiti', serif;
+    background: rgba(255,255,255,0.85) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E") 18px center no-repeat;
+    color: #3a3a3a;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+.search-input:focus {
+    border-color: #5a8a7a;
+    box-shadow: 0 0 0 3px rgba(90,138,122,0.12);
+    background-color: #fff;
+}
+.search-input::placeholder {
+    color: #aaa;
+}
+.search-stats {
+    text-align: center;
+    font-size: 13px;
+    color: #8a9a88;
+    margin-top: 8px;
+    min-height: 20px;
+}
 </style>
 
         /* ========== 板块独立Hero区 ========== */
@@ -12485,6 +12519,53 @@
     });
     
     console.log('[自清书斋] 交互元素已加载：滚动渐入 + 回到顶部');
+})();
+    </script>
+
+    <script>
+
+/* 搜索功能 */
+(function() {
+    var searchInput = document.getElementById('searchInput');
+    var searchStats = document.getElementById('searchStats');
+    if (!searchInput) return;
+    
+    searchInput.addEventListener('input', function() {
+        var query = this.value.trim().toLowerCase();
+        var cards = document.querySelectorAll('.article-card');
+        var visible = 0;
+        
+        cards.forEach(function(card) {
+            var title = (card.dataset.title || '').toLowerCase();
+            var summary = (card.dataset.summary || '').toLowerCase();
+            var tag = (card.dataset.tag || '').toLowerCase();
+            
+            if (!query || title.indexOf(query) >= 0 || summary.indexOf(query) >= 0 || tag.indexOf(query) >= 0) {
+                card.style.display = '';
+                card.classList.add('fade-in');
+                visible++;
+            } else {
+                card.style.display = 'none';
+                card.classList.remove('visible');
+            }
+        });
+        
+        if (searchStats) {
+            if (query) {
+                searchStats.textContent = '找到 ' + visible + ' 篇相关文章';
+            } else {
+                searchStats.textContent = '共 ' + cards.length + ' 篇文章';
+            }
+        }
+    });
+    
+    // 初始显示总数
+    var cards = document.querySelectorAll('.article-card');
+    if (searchStats) {
+        searchStats.textContent = '共 ' + cards.length + ' 篇文章';
+    }
+    
+    console.log('[自清书斋] 搜索功能已加载');
 })();
     </script>
 </body>
