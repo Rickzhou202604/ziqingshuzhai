@@ -5481,7 +5481,100 @@
         @media (max-width: 768px) {
             .decor-plum, .decor-orchid, .decor-bamboo, .decor-chrysanthemum { display: none; }
         }
-        </style>
+        
+/* ===== 各板块内容区域专属配色背景 ===== */
+
+/* 古籍典藏 - 淡青古纸色背景 */
+#ancient::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(90,138,122,0.05) 0%, rgba(245,242,235,0.8) 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+#ancient { position: relative; }
+
+/* 清斋公号 - 淡绯色背景 */
+#wechat::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(168,97,92,0.05) 0%, rgba(245,242,235,0.8) 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+#wechat { position: relative; }
+
+/* 今识文渊 - 淡墨色背景 */
+#modern::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(74,85,104,0.05) 0%, rgba(245,242,235,0.8) 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+#modern { position: relative; }
+
+/* 海外藏书 - 淡金色背景 */
+#overseas::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(184,168,140,0.08) 0%, rgba(245,242,235,0.8) 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+#overseas { position: relative; }
+
+/* 书斋服务 - 淡灰绿色背景 */
+#service::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(138,154,136,0.05) 0%, rgba(245,242,235,0.8) 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+#service { position: relative; }
+
+/* 确保板块内容在背景之上 */
+#ancient .section-header,
+#ancient .articles-grid,
+#wechat .section-header,
+#wechat .articles-grid,
+#modern .section-header,
+#modern .articles-grid,
+#overseas .section-header,
+#overseas .articles-grid,
+#service .section-header,
+#service .articles-grid {
+    position: relative;
+    z-index: 1;
+}
+
+/* 文章卡片悬停效果升级 */
+.article-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.article-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(90,138,122,0.15);
+}
+
+/* 板块 Hero 区装饰线 */
+.section-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(90,138,122,0.5), transparent);
+}
+</style>
 
         /* ========== 板块独立Hero区 ========== */
         .section-hero {
