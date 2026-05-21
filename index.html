@@ -8205,7 +8205,13 @@
         }
 
         // ===== ARTICLE DETAIL =====
-        async function openArticleDetail(articleId) {
+        function openArticleDetail(articleId) {
+            // 直接跳转到静态HTML详情页
+            window.location.href = 'articles/' + articleId + '.html';
+        }
+
+        /*
+        async function openArticleDetailOld(articleId) {
             const article = await sbGetArticle(articleId);
             if (!article) return;
 
