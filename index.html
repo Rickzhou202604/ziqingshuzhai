@@ -12243,5 +12243,67 @@
     window.addEventListener('popstate', insertHeros);
 })();
     </script>
+
+    <script>
+
+/* 动态上架新文章（第一批：古籍典藏 a19-a23） */
+(function() {
+    if (typeof articles === 'undefined') return;
+    articles.push(
+        { id:'a19', category:'ancient', title:'《周易》的智慧：变化与不变', tag:'经部', summary:'探究《周易》中变与不变的辩证智慧，以及其对中华文化思维的深远影响。', author:'自清书斋', views:320, createdAt:'2026-05-22', status:'published' },
+        { id:'a20', category:'ancient', title:'《春秋》三传比较研究', tag:'史部', summary:'比较研究《左传》《公羊传》《穀梁传》三传的诠释差异与学术价值。', author:'自清书斋', views:280, createdAt:'2026-05-22', status:'published' },
+        { id:'a21', category:'ancient', title:'诸子百家概论：思想盛宴', tag:'子部', summary:'概览春秋战国时期的百家争鸣盛况，重点介绍儒、道、墨、法、名、阴阳等学派。', author:'自清书斋', views:410, createdAt:'2026-05-22', status:'published' },
+        { id:'a22', category:'ancient', title:'魏晋风度与玄学思潮', tag:'子部', summary:'探讨魏晋时期独特的文化风貌与玄学思潮，理解"魏晋风度"的深层内涵。', author:'自清书斋', views:350, createdAt:'2026-05-22', status:'published' },
+        { id:'a23', category:'ancient', title:'唐代经学的发展与演变', tag:'经部', summary:'梳理唐代经学的发展脉络，重点介绍《五经正义》的编纂及其对后世的影响。', author:'自清书斋', views:290, createdAt:'2026-05-22', status:'published' }
+    );
+    console.log('[自清书斋] 动态上架：古籍典藏 +5 篇（a19-a23）');
+})();
+    </script>
+
+    <script>
+
+/* 动态上架新文章（第二批：清斋公号 w7-w11 + 今识文渊 k13-k17） */
+(function() {
+    if (typeof articles === 'undefined') return;
+    articles.push(
+        // 清斋公号 w7-w11
+        { id:'w7', category:'wechat', title:'阅读与人生：一位书友的自述', tag:'清斋公号', summary:'一位资深书友分享他的阅读故事，以及阅读如何改变了他的人生轨迹。', author:'自清书斋', views:680, createdAt:'2026-05-22', status:'published' },
+        { id:'w8', category:'wechat', title:'古籍修复的故事：让时光倒流', tag:'清斋公号', summary:'走进古籍修复师的世界，了解他们如何让破损的古籍重获新生，延续文脉。', author:'自清书斋', views:920, createdAt:'2026-05-22', status:'published' },
+        { id:'w9', category:'wechat', title:'书斋日常，一岁一礼', tag:'清斋公号', summary:'记录书斋里的日常点滴，感受岁月流转中的书香气息。', author:'自清书斋', views:750, createdAt:'2026-05-22', status:'published' },
+        { id:'w10', category:'wechat', title:'推荐一位你喜欢的作家', tag:'清斋公号', summary:'书友们推荐自己喜欢的作家，分享阅读体验，交流读书心得。', author:'自清书斋', views:580, createdAt:'2026-05-22', status:'published' },
+        { id:'w11', category:'wechat', title:'纸质书VS电子书：阅读的回到未来', tag:'清斋公号', summary:'探讨纸质书和电子书的优劣，思考阅读的未来形态。', author:'自清书斋', views:1100, createdAt:'2026-05-22', status:'published' },
+        // 今识文渊 k13-k17
+        { id:'k13', category:'modern', title:'《文心雕龙》与文学批评传统', tag:'文学', summary:'探讨《文心雕龙》在中国文学批评史上的地位，及其对后世文论的影响。', author:'自清书斋', views:380, createdAt:'2026-05-22', status:'published' },
+        { id:'k14', category:'modern', title:'明清小说中的市民社会', tag:'历史', summary:'分析明清小说（如《金瓶梅》《红楼梦》）中所反映的市民社会面貌。', author:'自清书斋', views:420, createdAt:'2026-05-22', status:'published' },
+        { id:'k15', category:'modern', title:'近代中国的文库运动', tag:'文化', summary:'梳理近代中国文库运动的发展历程，探讨其文化意义和历史影响。', author:'自清书斋', views:310, createdAt:'2026-05-22', status:'published' },
+        { id:'k16', category:'modern', title:'鲁迅与古籍整理', tag:'文学', summary:'探讨鲁迅在古籍整理方面的贡献，以及他的学术研究与文学创作的关系。', author:'自清书斋', views:390, createdAt:'2026-05-22', status:'published' },
+        { id:'k17', category:'modern', title:'数字化时代的经典阅读', tag:'文化', summary:'思考在数字化时代，我们该如何阅读经典，以及经典阅读的未来形态。', author:'自清书斋', views:520, createdAt:'2026-05-22', status:'published' }
+    );
+    console.log('[自清书斋] 动态上架：清斋公号 +5 篇（w7-w11），今识文渊 +5 篇（k13-k17）');
+})();
+    </script>
+
+    <script>
+
+/* 动态上架新文章（第三批：海外藏书 o13-o17 + 书斋服务 s5-s9） */
+(function() {
+    if (typeof articles === 'undefined') return;
+    articles.push(
+        // 海外藏书 o13-o17
+        { id:'o13', category:'overseas', title:'美国国会图书馆的中文收藏', tag:'海外藏书', summary:'介绍美国国会图书馆的中文典籍收藏情况，以及其学术研究价值。', author:'自清书斋', views:450, createdAt:'2026-05-22', status:'published' },
+        { id:'o14', category:'overseas', title:'欧洲汉学的起源与发展', tag:'海外藏书', summary:'梳理欧洲汉学从萌芽到繁荣的发展历程，介绍主要汉学家及其贡献。', author:'自清书斋', views:380, createdAt:'2026-05-22', status:'published' },
+        { id:'o15', category:'overseas', title:'日本内阁文库的珍本典藏', tag:'海外藏书', summary:'介绍日本内阁文库的中文珍本收藏，以及其在汉籍研究中的重要地位。', author:'自清书斋', views:520, createdAt:'2026-05-22', status:'published' },
+        { id:'o16', category:'overseas', title:'东南亚的中华典籍流传', tag:'海外藏书', summary:'探讨中华典籍在东南亚地区的流传情况，以及其对当地文化的影响。', author:'自清书斋', views:340, createdAt:'2026-05-22', status:'published' },
+        { id:'o17', category:'overseas', title:'海外华文文学的典藏与研究', tag:'海外藏书', summary:'介绍海外华文文学的典藏情况，以及其研究与传播现状。', author:'自清书斋', views:410, createdAt:'2026-05-22', status:'published' },
+        // 书斋服务 s5-s9
+        { id:'s5', category:'service', title:'古籍修复服务：让破损的书籍重获新生', tag:'书斋服务', summary:'详细介绍古籍修复服务的流程、技术和成果，让破损的古书重获新生。', author:'自清书斋', views:680, createdAt:'2026-05-22', status:'published' },
+        { id:'s6', category:'service', title:'个性化阅读推荐：为你量身打造书单', tag:'书斋服务', summary:'根据您的阅读兴趣、阅读水平和阅读目标，为您量身打造个性化书单。', author:'自清书斋', views:920, createdAt:'2026-05-22', status:'published' },
+        { id:'s7', category:'service', title:'文化讲座策划：让知识活起来', tag:'书斋服务', summary:'策划和组织文化讲座，让知识走出书斋，走进生活。', author:'自清书斋', views:750, createdAt:'2026-05-22', status:'published' },
+        { id:'s8', category:'service', title:'古籍影印服务：珍贵文献的复制与传播', tag:'书斋服务', summary:'提供古籍影印服务，让珍贵文献得以复制和传播，惠及更多读者。', author:'自清书斋', views:580, createdAt:'2026-05-22', status:'published' },
+        { id:'s9', category:'service', title:'学术查重服务：保障学术诚信', tag:'书斋服务', summary:'提供学术查重服务，帮助学者和学术机构检测学术不端行为，保障学术诚信。', author:'自清书斋', views:1100, createdAt:'2026-05-22', status:'published' }
+    );
+    console.log('[自清书斋] 动态上架：海外藏书 +5 篇（o13-o17），书斋服务 +5 篇（s5-s9）');
+})();
+    </script>
 </body>
 </html>
